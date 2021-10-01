@@ -1,0 +1,30 @@
+﻿<Window x:Class="animacja.SettingsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:animacja"
+        mc:Ignorable="d"
+        Title="Settings" Height="260" Width="300" ResizeMode="NoResize">
+    <Grid VerticalAlignment="Top">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="60"/>
+        </Grid.RowDefinitions>
+        <Label Content="Absolute horizontal speed:" Grid.Row="0" Margin="15,10,15,0"/>
+        <DockPanel VerticalAlignment="Top" Height="47" Margin="20,0,20,10" Grid.Row="1">
+            <Slider Height="30" Width="189" Minimum="0" Maximum="10" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="xSpeedSlider" VerticalAlignment="Top" Cursor="Hand"/>
+            <TextBox Text="{Binding Value, ElementName=xSpeedSlider, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" DockPanel.Dock="Right" Width="33" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        </DockPanel>
+        <Label Content="Absolute vertical speed:" Grid.Row="2" Margin="15,10,15,0"/>
+        <DockPanel VerticalAlignment="Top" Height="47" Margin="20,0,20,10" Grid.Row="3">
+            <Slider Height="30" Width="189" Maximum="10" Minimum="0" TickPlacement="BottomRight" TickFrequency="1" IsSnapToTickEnabled="True" x:Name="ySpeedSlider" VerticalAlignment="Top" Cursor="Hand"/>
+            <TextBox Text="{Binding Value, ElementName=ySpeedSlider, UpdateSourceTrigger=PropertyChanged}" TextAlignment="Right" DockPanel.Dock="Right" Width="33" Height="18" HorizontalAlignment="Right" VerticalAlignment="Top"/>
+        </DockPanel>
+        <Button x:Name="SettingsCancel" Click="SettingsCancelClick" Grid.Row="4" Margin="90,10,90,10" VerticalAlignment="Center" HorizontalAlignment="Left" Width="48" Cursor="Hand" IsCancel="True">Cancel</Button>
+        <Button x:Name="SettingsApply" Click="SettingsApplyClick" Grid.Row="4" Margin="90,10,90,10" VerticalAlignment="Center" HorizontalAlignment="Right" Width="48" Cursor="Hand" IsDefault="True">Apply</Button>
+    </Grid>
+</Window>

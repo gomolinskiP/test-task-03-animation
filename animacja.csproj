@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>main-icon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="about.png" />
+    <None Remove="ball.png" />
+    <None Remove="ball2.png" />
+    <None Remove="ball3.png" />
+    <None Remove="close.png" />
+    <None Remove="movingobj.png" />
+    <None Remove="movingObj2.png" />
+    <None Remove="settings.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="about.png" />
+    <Resource Include="ball3.png" />
+    <Resource Include="close.png" />
+    <Resource Include="settings.png" />
+  </ItemGroup>
+
+</Project>

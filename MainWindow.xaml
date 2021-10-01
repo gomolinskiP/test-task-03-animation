@@ -1,0 +1,57 @@
+﻿<Window x:Class="animacja.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:animacja"
+        mc:Ignorable="d"
+        Title="Animation" Height="450" Width="800" ResizeMode="CanResizeWithGrip"
+        
+>
+
+    <Grid x:Name="mainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0">
+            <Menu>
+                <MenuItem Header="File">
+                    <MenuItem Header="Settings" 
+                              x:Name="SETTINGS"
+                              Click="SETTINGS_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/settings.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <MenuItem Header="About" 
+                              x:Name="ABOUT"
+                              Click="ABOUT_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/about.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                    <Separator/>
+                    <MenuItem Header="Exit" 
+                              x:Name="EXIT"
+                              Click="EXIT_Click">
+                        <MenuItem.Icon>
+                            <Image Source="/close.png"></Image>
+                        </MenuItem.Icon>
+                    </MenuItem>
+                </MenuItem>
+            </Menu>
+        </StackPanel>
+        <Canvas Name="myCanvas" Background="#c648ea" Grid.RowSpan="1" Grid.Row="1" Margin="0,0,0,0">
+
+
+            <Image Name="Rect" Height="120" Width="110" Stretch="Fill" Source="/ball3.png" RenderTransformOrigin="0.5,0.5" Canvas.Left="345" Canvas.Top="148"/>
+
+
+        </Canvas>
+
+    </Grid>
+
+</Window>
+
